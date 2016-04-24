@@ -1,0 +1,839 @@
+.projectCWrapper {
+	position: relative;
+	margin-top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 1600px;
+	height: 100%;
+}
+.ASRow1 {
+	height: 160px;
+	width: 100%;
+	display: block;
+	position: relative;
+}
+
+.ASRow2 {
+	height: 160px;
+	width: 100%;
+	display: block;
+	position: relative;
+}
+	#AS2TitleBox {
+		height: 160px;
+		width: 800px;
+		background-color: #319dd2;
+		left: 320px;
+		position: absolute;
+	}
+		#AS2TitleBoxTitle {
+			font-family: Titillium-Bold;
+			color: #fafafa;
+			font-size: 30pt;
+			position: absolute;
+			top: 30px;
+			left: 30px;
+		}
+		#AS2TitleBoxDesc {
+			font-family: helvetica;
+			color: #fafafa;
+			font-size: 16pt;
+			font-weight: 150;
+			position: absolute;
+			top: 96px;
+			left: 31px;
+		}
+
+.ASRow3 {
+	height: 640px;
+	width: 100%;
+	display: block;
+	position: relative;
+}
+	#AS3TitleBox {
+		width: 320px;
+		height: 320px;
+		background-color: #319dd2;
+		position: absolute;
+	}
+		#AS3TitleBoxTitle {
+			font-family: Titillium-Thin;
+			color: #fafafa;
+			font-size: 50pt;
+			position: absolute;
+			top: 106px;
+			left: 36px;
+		}
+		#AS3TitleBoxHighlighted {
+			font-family: Titillium-Bold;
+		}
+	#AS3InfoBox {
+		width: 1120px;
+		height: 640px;
+		background-color: #f9f9f9;
+		left: 320px;
+		position: absolute;
+	}
+		#AS3InfoBoxTitle {
+			font-family: Titillium-Bold;
+			font-size: 40pt;
+			color: #333333;
+			left: 30px;
+			top: 10px;
+			position: relative;
+			display: block;
+		}
+		#AS3InfoBoxTextLeft {
+			font-family: helvetica;
+			color: #666666;
+			font-size: 13pt;
+			text-indent: 30px;
+			position: absolute;
+			left: 30px;
+			top: 110px;
+			width: 520px;
+			height: 534px;
+		}
+		#AS3InfoBoxTextRight {
+			font-family: helvetica;
+			color: #666666;
+			font-size: 13pt;
+			text-indent: 30px;
+			position: absolute;
+			left: 580px;
+			top: 110px;
+			width: 520px;
+			height: 534px;
+		}
+	#AS3GraphicBox {
+		width: 160px;
+		height: 640px;
+		background-color: #319dd2;
+		position: absolute;
+		left: 1440px;
+	}
+		#AS3SMButtons {
+			display: inline-block;
+			width: 160px;
+			height: 160px;
+			top: 240px;
+			position: relative;
+			overflow: hidden;
+		}
+		#AS3SMTable {
+			width: 160px;
+			height: 160px;
+			border-spacing: 0px;
+			cursor: pointer;
+		}
+		.AS3SMLink {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+		#AS3SMTwitterLogo {
+			background-image: url("images/socialMediaLinks/twitter.png");
+			background-color: #48aadc;
+			width: 80px;
+			height: 80px;
+			-webkit-transition: background-image 100ms linear;
+			transition: background-image 100ms linear;
+			-webkit-transition: background-color 100ms linear;
+			transition: background-color 100ms linear;
+		}
+		#AS3SMTwitterLogo:hover {
+			background-image: url("images/socialMediaLinks/twitterHover.png");
+			background-color: #f0f0f0;
+		}
+		#AS3SMFacebookLogo {
+			background-image: url("images/socialMediaLinks/facebook.png");
+			background-color: #319dd2;
+			width: 80px;
+			height: 80px;
+			-webkit-transition: background-image 100ms linear;
+			transition: background-image 100ms linear;
+			-webkit-transition: background-color 100ms linear;
+			transition: background-color 100ms linear;
+		}
+		#AS3SMFacebookLogo:hover {
+			background-image: url("images/socialMediaLinks/facebookHover.png");
+			background-color: #f0f0f0;
+		}
+		#AS3SMGPlusLogo {
+			background-image: url("images/socialMediaLinks/gPlus.png");
+			background-color: #319dd2;
+			width: 80px;
+			height: 80px;
+			-webkit-transition: background-image 100ms linear;
+			transition: background-image 100ms linear;
+			-webkit-transition: background-color 100ms linear;
+			transition: background-color 100ms linear;
+		}
+		#AS3SMGPlusLogo:hover {
+			background-image: url("images/socialMediaLinks/gPlusHover.png");
+			background-color: #f0f0f0;
+		}
+		#AS3SMYoutubeLogo {
+			background-image: url("images/socialMediaLinks/youtube.png");
+			background-color: #48aadc;
+			width: 80px;
+			height: 80px;
+			-webkit-transition: background-image 100ms linear;
+			transition: background-image 100ms linear;
+			-webkit-transition: background-color 100ms linear;
+			transition: background-color 100ms linear;
+		}
+		#AS3SMYoutubeLogo:hover {
+			background-image: url("images/socialMediaLinks/youtubeHover.png");
+			background-color: #f0f0f0;
+		}
+
+.ASRow4 {
+	height: 80px;
+	width: 100%;
+	display: block;
+	position: relative;
+}
+	#AS4DownloadLink {
+		height: 80px;
+		width: 320px;
+		left: 1120px;
+		background-color: #319dd2;
+		position: absolute;
+		-webkit-transition: background-color 100ms linear;
+		transition: background-color 100ms linear;
+	}
+	#AS4DownloadLink:hover {
+		background-color: #48aadc;
+	}
+		#AS4DownloadText {
+			font-family: Titillium-Bold;
+			font-size: 18pt;
+			position: absolute;
+			left: 10px;
+			top: 22px;
+			color: #fcfcfc;
+		}
+		#AS4DownloadImage {
+			position: absolute;
+			left: 243px;
+			top: 22px;
+		}
+.ASRow5 {
+	height: 1812px;
+	width: 100%;
+	display: block;
+	position: relative;
+}
+	#AS5TableauWrapper {
+		width: 1600px;
+		height: 1812px;
+		overflow: hidden;
+		position: relative;
+	}
+	#AS5TableauFrame{
+		top: -110px;
+		width: 1600px;
+		height: 1922px;
+		position: absolute;
+	}
+.ASRow6 {
+	height: 320px;
+	width: 100%;
+	display: block;
+	position: relative;
+}
+	#AS6InfoBox {
+		height: 320px;
+		width: 1600px;
+		position: absolute;
+		background-color: #319dd2;
+	}
+		#AS6InfoBoxTitle {
+			font-family: Titillium-Bold;
+			font-size: 30pt;
+			color: #fafafa;
+			position: absolute;
+			top: 20px;
+			left: 30px;
+		}
+		#AS6InfoBoxTextLeft {
+			width: 745px;
+			font-family: helvetica;
+			font-size: 13pt;
+			text-indent: 30px;
+			color: #dceffd;
+			position: absolute;
+			top: 90px;
+			left: 30px;
+		}
+		#AS6InfoBoxTextRight {
+			width: 745px;
+			font-family: helvetica;
+			font-size: 13pt;
+			text-indent: 30px;
+			color: #dceffd;
+			position: absolute;
+			top: 90px;
+			left: 815px;
+		}
+.ASRow7 {
+	height: 960px;
+	width: 100%;
+	display: block;
+	position: relative;
+}
+	#AS7TableauWrapper {
+		width: 960px;
+		height: 960px;
+		overflow: hidden;
+		position: absolute;
+	}
+	#AS7TableauFrame{
+		top: -110px;
+		width: 960px;
+		height: 1070px;
+		position: absolute;
+	}
+	#AS7ColorKey {
+		width: 320px;
+		height: 320px;
+		position: absolute;
+		left: 960px;
+		top: 320px;
+	}
+	#AS7InfoBox {
+		width: 320px;
+		height: 320px;
+		position: absolute;
+		background-color: #319dd2;
+		left: 960px;
+		top: 640px;
+	}
+		#AS7InfoBoxTitle {
+			position: absolute;
+			width: 300px;
+			left: 10px;
+			top: 30px;
+			font-family: Titillium-Bold;
+			font-size: 17pt;
+			color: #fafafa;
+			text-align: center;
+		}
+		#AS7InfoBoxText {
+			width: 300px;
+			height: 300px;
+			position: absolute;
+			top: 100px;
+			left: 10px;
+			font-family: helvetica;
+			font-size: 12pt;
+			text-align: center;
+			color: #dceffd;
+		}
+.ASRow8 {
+	height: 960px;
+	width: 100%;
+	display: block;
+	position: relative;
+}
+	#AS8ColorKey {
+		width: 320px;
+		height: 320px;
+		position: absolute;
+		left: 320px;
+		top: 320px;
+	}
+	#AS8InfoBox {
+		width: 320px;
+		height: 320px;
+		position: absolute;
+		background-color: #319dd2;
+		left: 320px;
+	}
+		#AS8InfoBoxTitle {
+			position: absolute;
+			width: 300px;
+			left: 10px;
+			top: 30px;
+			font-family: Titillium-Bold;
+			font-size: 17pt;
+			color: #fafafa;
+			text-align: center;
+		}
+		#AS8InfoBoxText {
+			width: 300px;
+			height: 300px;
+			position: absolute;
+			top: 100px;
+			left: 10px;
+			font-family: helvetica;
+			font-size: 12pt;
+			text-align: center;
+			color: #dceffd;
+		}
+	#AS8TableauWrapper {
+		width: 960px;
+		height: 960px;
+		overflow: hidden;
+		position: absolute;
+		left: 640px;
+	}
+	#AS8TableauFrame{
+		top: -110px;
+		width: 960px;
+		height: 1070px;
+		position: absolute;
+	}
+.ASRow9 {
+	height: 320px;
+	width: 100%;
+	display: block;
+	position: relative;
+}
+	#AS9InfoBox {
+		height: 320px;
+		width: 1600px;
+		position: absolute;
+		background-color: #319dd2;
+	}
+		#AS9InfoBoxTitle {
+			font-family: Titillium-Bold;
+			font-size: 30pt;
+			color: #fafafa;
+			position: absolute;
+			top: 20px;
+			left: 30px;
+		}
+		#AS9InfoBoxTextLeft {
+			width: 745px;
+			font-family: helvetica;
+			font-size: 13pt;
+			text-indent: 30px;
+			color: #dceffd;
+			position: absolute;
+			top: 90px;
+			left: 30px;
+		}
+		#AS9InfoBoxTextRight {
+			width: 745px;
+			font-family: helvetica;
+			font-size: 13pt;
+			color: #dceffd;
+			position: absolute;
+			top: 90px;
+			left: 815px;
+		}
+.ASRow10 {
+	height: 951px;
+	width: 100%;
+	display: block;
+	position: relative;
+}
+	#AS10TableauWrapper {
+		width: 1600px;
+		height: 950px;
+		overflow: hidden;
+		position: relative;
+	}
+	#AS10TableauFrame{
+		top: -110px;
+		width: 1600px;
+		height: 1061px;
+		position: absolute;
+	}
+.ASRow11 {
+	height: 640px;
+	width: 100%;
+	display: block;
+	position: relative;
+	top: -1px;
+}
+	#AS11InfoBox {
+		width: 320px;
+		height: 640px;
+		position: absolute;
+		background-color: #319dd2;
+	}
+		#AS11InfoBoxTitle {
+			position: absolute;
+			width: 300px;
+			left: 10px;
+			top: 30px;
+			font-family: Titillium-Bold;
+			font-size: 17pt;
+			color: #fafafa;
+			text-align: center;
+		}
+		#AS11InfoBoxText {
+			width: 300px;
+			height: 620px;
+			position: absolute;
+			top: 100px;
+			left: 10px;
+			font-family: helvetica;
+			font-size: 12pt;
+			text-align: center;
+			color: #dceffd;
+		}
+	#AS11TableauWrapper {
+		width: 1280px;
+		height: 640px;
+		overflow: hidden;
+		position: absolute;
+		left: 320px;
+	}
+	#AS11TableauFrame{
+		top: -110px;
+		width: 1280px;
+		height: 770px;
+		position: absolute;
+	}
+.ASRow12 {
+	height: 640px;
+	width: 100%;
+	display: block;
+	position: relative;
+}
+	#AS12InfoBox {
+		width: 320px;
+		height: 640px;
+		position: absolute;
+		left: 1280px;
+		background-color: #319dd2;
+	}
+		#AS12InfoBoxTitle {
+			position: absolute;
+			width: 300px;
+			left: 10px;
+			top: 30px;
+			font-family: Titillium-Bold;
+			font-size: 17pt;
+			color: #fafafa;
+			text-align: center;
+		}
+		#AS12InfoBoxText {
+			width: 300px;
+			height: 620px;
+			position: absolute;
+			top: 100px;
+			left: 10px;
+			font-family: helvetica;
+			font-size: 12pt;
+			text-align: center;
+			color: #dceffd;
+		}
+	#AS12TableauWrapper {
+		width: 1280px;
+		height: 640px;
+		overflow: hidden;
+		position: absolute;
+	}
+	#AS12TableauFrame{
+		top: -110px;
+		width: 1280px;
+		height: 770px;
+		position: absolute;
+	}
+		
+.ASRow13 {
+	height: 160px;
+	width: 100%;
+	display: block;
+	position: relative;
+}
+	#AS13TitleBox {
+		height: 160px;
+		width: 1280px;
+		background-color: #319dd2;
+		position: absolute;
+	}
+		#AS13TitleBoxTitle {
+			font-family: Titillium-Bold;
+			color: #fafafa;
+			font-size: 30pt;
+			position: absolute;
+			top: 50px;
+			left: 30px;
+		}
+
+.ASRow14 {
+	height: 960px;
+	width: 100%;
+	display: block;
+	position: relative;
+}
+	#AS14InfoBox {
+		width: 1280px;
+		height: 960px;
+		background-color: #f9f9f9;
+		position: absolute;
+	}
+		#AS14InfoBoxTitle {
+			font-family: Titillium-Bold;
+			font-size: 40pt;
+			color: #333333;
+			left: 30px;
+			top: 10px;
+			position: relative;
+			display: block;
+		}
+		#AS14InfoBoxTextLeft {
+			font-family: helvetica;
+			color: #666666;
+			font-size: 12pt;
+			text-indent: 30px;
+			position: absolute;
+			left: 30px;
+			top: 110px;
+			width: 520px;
+			height: 534px;
+		}
+		#AS14InfoBoxTextRight {
+			font-family: helvetica;
+			color: #666666;
+			font-size: 12pt;
+			text-indent: 30px;
+			position: absolute;
+			left: 580px;
+			top: 110px;
+			width: 520px;
+			height: 534px;
+		}
+	#AS14GraphicBox {
+		width: 320px;
+		height: 960px;
+		background-color: #319dd2;
+		position: absolute;
+		left: 1280px;
+	}
+
+
+
+
+
+
+
+
+.projectCWrapperS {
+	position: relative;
+	margin-top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 1280px;
+	height: 100%;
+}
+#AS2TitleBoxS {
+	height: 160px;
+	width: 800px;
+	background-color: #319dd2;
+	position: absolute;
+}
+#AS3InfoBoxS {
+	width: 1120px;
+	height: 640px;
+	background-color: #f9f9f9;
+	position: absolute;
+}
+#AS3GraphicBoxS {
+	width: 160px;
+	height: 640px;
+	background-color: #319dd2;
+	position: absolute;
+	left: 1120px;
+}
+#AS4DownloadLinkS {
+	height: 80px;
+	width: 320px;
+	left: 800px;
+	background-color: #319dd2;
+	position: absolute;
+	-webkit-transition: background-color 100ms linear;
+	transition: background-color 100ms linear;
+}
+#AS4DownloadLinkS:hover {
+	background-color: #48aadc;
+}
+.ASRow5S {
+	height: 1500px;
+	width: 100%;
+	display: block;
+	position: relative;
+}
+#AS5TableauWrapperS {
+	width: 1280px;
+	height: 1500px;
+	overflow: hidden;
+	position: relative;
+}
+#AS5TableauFrameS{
+	top: -110px;
+	width: 1280px;
+	height: 1622px;
+	position: absolute;
+}
+#AS6InfoBoxS {
+	height: 320px;
+	width: 1280px;
+	position: absolute;
+	background-color: #319dd2;
+}
+#AS6InfoBoxTitleS {
+	font-family: Titillium-Bold;
+	font-size: 25pt;
+	color: #fafafa;
+	position: absolute;
+	top: 20px;
+	left: 30px;
+}
+#AS6InfoBoxTextLeftS {
+	width: 585px;
+	font-family: helvetica;
+	font-size: 12pt;
+	text-indent: 30px;
+	color: #dceffd;
+	position: absolute;
+	top: 85px;
+	left: 30px;
+}
+#AS6InfoBoxTextRightS {
+	width: 585px;
+	font-family: helvetica;
+	font-size: 12pt;
+	text-indent: 30px;
+	color: #dceffd;
+	position: absolute;
+	top: 85px;
+	left: 655px;
+}
+#AS8ColorKeyS {
+	width: 320px;
+	height: 320px;
+	position: absolute;
+	top: 320px;
+}
+#AS8InfoBoxS {
+	width: 320px;
+	height: 320px;
+	position: absolute;
+	background-color: #319dd2;
+}
+#AS8TableauWrapperS {
+	width: 960px;
+	height: 960px;
+	overflow: hidden;
+	position: absolute;
+	left: 320px;
+}
+#AS9InfoBoxS {
+	height: 320px;
+	width: 1280px;
+	position: absolute;
+	background-color: #319dd2;
+}
+#AS9InfoBoxTitleS {
+	font-family: Titillium-Bold;
+	font-size: 25pt;
+	color: #fafafa;
+	position: absolute;
+	top: 20px;
+	left: 30px;
+}
+#AS9InfoBoxTextLeftS {
+	width: 585px;
+	font-family: helvetica;
+	font-size: 12pt;
+	text-indent: 30px;
+	color: #dceffd;
+	position: absolute;
+	top: 85px;
+	left: 30px;
+}
+#AS9InfoBoxTextRightS {
+	width: 585px;
+	font-family: helvetica;
+	font-size: 12pt;
+	text-indent: 30px;
+	color: #dceffd;
+	position: absolute;
+	top: 85px;
+	left: 655px;
+}
+.ASRow10S {
+	height: 800px;
+	width: 100%;
+	display: block;
+	position: relative;
+}
+#AS10TableauWrapperS {
+	width: 1280px;
+	height: 800px;
+	overflow: hidden;
+	position: relative;
+}
+#AS10TableauFrameS {
+	top: -110px;
+	width: 1280px;
+	height: 940px;
+	position: absolute;
+}
+#AS11TableauWrapperS {
+	width: 960px;
+	height: 640px;
+	overflow: hidden;
+	position: absolute;
+	left: 320px;
+}
+#AS11TableauFrameS {
+	top: -110px;
+	width: 960px;
+	height: 770px;
+	position: absolute;
+}
+#AS12InfoBoxS {
+	width: 320px;
+	height: 640px;
+	position: absolute;
+	left: 960px;
+	background-color: #319dd2;
+}
+#AS12TableauWrapperS {
+	width: 960px;
+	height: 640px;
+	overflow: hidden;
+	position: absolute;
+}
+#AS12TableauFrameS {
+	top: -110px;
+	width: 960px;
+	height: 770px;
+	position: absolute;
+}
+#AS13TitleBoxS {
+	height: 160px;
+	width: 960px;
+	background-color: #319dd2;
+	position: absolute;
+}
+#AS14InfoBoxTextLeftS {
+	font-family: helvetica;
+	color: #666666;
+	font-size: 12pt;
+	text-indent: 30px;
+	position: absolute;
+	left: 30px;
+	top: 110px;
+	width: 585px;
+	height: 534px;
+}
+#AS14InfoBoxTextRightS {
+	font-family: helvetica;
+	color: #666666;
+	font-size: 12pt;
+	text-indent: 30px;
+	position: absolute;
+	left: 655px;
+	top: 110px;
+	width: 585px;
+	height: 534px;
+}

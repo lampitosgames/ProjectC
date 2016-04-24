@@ -1,0 +1,680 @@
+@font-face {
+font-family: Titillium-Bold;
+src: url(Titillium-Bold.otf);
+}
+@font-face {
+font-family: Titillium;
+src: url(Titillium-Thin.otf);
+}
+@font-face {
+font-family: Simplifica;
+src: url(SIMPLIFICA.ttf);
+}
+html,body {
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+::selection {
+	color: #505050;
+	background: rgb(247, 247, 247);
+}
+::-moz-selection {
+	color: #505050;
+	background: rgb(247, 247, 247);
+}
+
+/* The Navbar */
+	/** Wrapper for the sidebar **/
+	#navbar {
+		z-index: 10;
+		float: left;
+		position: fixed;
+		width: 300px;
+		overflow: hidden;
+		padding-left: 50px;
+	}
+	
+	/** The slide-in background **/
+	#navbarBackground {
+		position: absolute;
+		width: 300px;
+		left: -300px;
+		background-color: #191919;
+		-webkit-transition: all 300ms ease-out;
+		transition: all 300ms ease-out;
+	}
+
+	/** wraps both the buttons **/
+	.topButtonWrapper {
+		margin-top: 50px;
+		pointer-events: all;
+		vertical-align: top;
+		border-spacing: 10px;
+		text-align: center;
+		display: table;
+	}
+	/** Hamburger Button! **/
+		/** Wrapper **/
+		.hamburgerButtonWrapper {
+			padding: 4px;
+			width: 17px;
+			height: 13px;
+			display: table-cell;
+			text-align: center;
+			-webkit-transition: all 300ms ease-out;
+			transition: all 300ms ease-out;
+		}
+		/** the button itself **/
+		.hamburgerButton {
+			opacity: 0.8;
+			cursor: pointer;
+			position: relative;
+			width: 17px;
+			height: 13px;
+			padding: 2px;
+			bottom: 5px;
+			-webkit-transition: all 300ms ease-out;
+			transition: all 300ms ease-out;
+		}
+		/** bars **/
+		.hamBar {
+			background-color: #FEFEFE;
+			width: 17px;
+			margin-top: 3px;
+			height: 2px;
+			border-radius: 2px;
+			display: block;
+		}
+	/** Back Button! **/
+		/** Wrapper **/
+		.backButtonWrapper {
+			padding: 4px;
+			opacity: 0.0;
+			width: 22px;
+			height: 13px;
+			display: table-cell;
+			-webkit-transition: all 300ms ease-out;
+			transition: all 300ms ease-out;
+		}
+		/** the button itself **/
+		.backButton {
+			cursor: pointer;
+			position: relative;
+			width: 22px;
+			height: 13px;
+			-webkit-transition: all 300ms ease-out;
+			transition: all 300ms ease-out;
+		}
+		/** back button text **/
+		.backButtonText {
+			color: #FEFEFE;
+			font-family: Titillium-Bold;
+			font-size: 20px;
+			position: relative;
+			bottom: 6px;
+		}
+
+	/** Title **/
+		/** Title wrapper **/
+		.headerTitle {
+			color: #FEFEFE;
+			opacity: 0.8;
+			margin-left: -2px;
+			position: relative;
+			-webkit-transition: all 300ms ease-out;
+			transition: all 300ms ease-out;
+		}
+		/** parts of the title **/
+		#title {
+			font-size: 36px;
+			font-family: Titillium-Bold;
+			display: inline-block;
+			position: relative;
+		}
+
+	/** Info links **/
+		/** Wrapper for the info links **/
+		.infoLinks {
+			display: table;
+			font-size: 14px;
+			text-align: center;
+			font-family: Titillium;
+			margin-left: -21px;
+			color: #FEFEFE;
+			opacity: 0.8;
+		}
+		/** individual links **/
+		.infoLink {
+			display: table-cell;
+			width: 82px;
+			cursor: pointer;
+			-webkit-transition: all 100ms linear;
+			transition: all 100ms linear;
+		}
+		/** individual link on hover **/
+		.infoLink:hover {
+			color: #ECECEC;
+			
+		}
+		/** line between links **/
+		.infoDividerDiv {
+			width: 1px;
+			height: 14px;
+			display: table-cell;
+			background-color: #FEFEFE;
+		}
+	
+	/** Highlights Page Display **/
+		/** Wrapper for the page links **/
+		.highlightLinks {
+			font-family: Titillium-Bold;
+			font-size: 24px;
+			color: #FEFEFE;
+			width: 100px;
+			position: relative;
+			-webkit-transition: all 300ms ease-out;
+			transition: all 300ms ease-out;
+		}
+		/** Wrapper for individual links **/
+		.hlLink {
+			position: relative;
+			cursor: pointer;
+			height: 85px;
+			background-color: rgba(255, 255, 255, 0.001);
+		}
+		/** Bullet point **/
+		.hlLinkCircle {
+			border-radius: 50%;
+			position: absolute;
+			opacity: 0.8;
+			bottom: 4px;
+			left: 0px;
+			width: 6px;
+			height: 6px;
+			border: 1.5px solid #FAFAFA;
+			-webkit-transition: all 100ms linear;
+			transition: all 100ms linear;
+		}
+		/** Text on each link **/
+		.hlLinkText {
+			position: absolute;
+			width: 216px;
+			opacity: 0.0;
+			bottom: -3px;
+			left: 24px;
+			-webkit-transition: all 150ms ease-in-out;
+			transition: all 150ms ease-in-out;
+		}
+		/** Line below the link **/
+		.hlLinkLine {
+			position: absolute;
+			left: 0px;
+			opacity: 0.8;
+			bottom: -4px;
+			height: 2px;
+			width: 8px;
+			background-color: #B2B2B2;
+			-webkit-transition: all 250ms ease-out;
+			transition: all 250ms ease-out;
+		}
+		/** Active state means that the current link is the one active on the page **/
+		/** Bullet point in the 'active' state. **/
+		.hlLinkCircleActive {
+			border-radius: 50%;
+			position: absolute;
+			opacity: 0.8;
+			bottom: 4px;
+			left: 0px;
+			width: 6px;
+			height: 6px;
+			border: 1.5px solid #FAFAFA;
+			background-color: #FAFAFA;
+			-webkit-transition: all 100ms linear;
+			transition: all 100ms linear;
+		}
+		/** Link text in the 'active' state **/
+		.hlLinkTextActive {
+			position: absolute;
+			width: 216px;
+			opacity: 0.8;
+			bottom: -3px;
+			left: 32px;
+			-webkit-transition: all 150ms ease-in-out;
+			transition: all 150ms ease-in-out;
+		}
+		/** Link line in the 'active' state **/
+		.hlLinkLineActive {
+			position: absolute;
+			left: 0px;
+			opacity: 0.8;
+			bottom: -4px;
+			height: 2px;
+			width: 100px;
+			background-color: #FAFAFA;
+			-webkit-transition: all 250ms ease-out;
+			transition: all 250ms ease-out;
+		}
+
+		/** Individual Link ID's **/
+		#hlLink1 {
+		}
+		#hlLink2 {
+		}
+		#hlLink3 {
+		}
+		#hlLink4 {
+		}
+		#hlLink5 {
+		}
+		#hlLink6 {
+		}
+
+/* Scroll Bar */
+	/** Wrapper for the scrollbar **/
+	#scrollBarWrapper {
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		position: absolute;
+		z-index: 10;
+		height: 100%;
+		width: 10px;
+	}
+	/** The scrollbar itself **/
+	#scrollBar {
+		background-color: #626262;
+		opacity: 0.7;
+		position: relative;
+		height: 200px;
+		width: 10px;
+		cursor: n-resize;
+		border-radius: 5px;
+	}
+
+/* Front Page Highlights section */
+	/** Wrapper for all of the highlight posts **/
+	#highlightsWrapper {
+		overflow: hidden;
+		position: absolute;
+		font-family: Titillium;
+		color: #FEFEFE;
+		opacity: 1.0;
+	}
+	/** Individual Highlights **/
+		/** Wrapper class for all highlights **/
+		.highlight {
+			position: relative;
+			overflow: hidden;
+		}
+		/** Class for all the highlight backgrounds **/
+		.highlightBackgroundImage {
+			z-index: 1;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+		}
+		/** Animated line at the top of page **/
+		.hlMidLineTop {
+			z-index: 3;
+			position: absolute;
+			top: 0px;
+			height: 300px;
+			width: 1px;
+			opacity: 0.4;
+			background-color: #FAFAFA;
+		}
+		/** Wrapper class for div boxes containing the titles, the short descriptions, animated lines, and the view buttons for each highlight **/
+		.hlContent {
+			z-index: 3;
+			position: relative;
+			width: 600px;
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		/** The title for each highlight **/
+		.hlMainTitle {
+			font-size: 100px;
+			position: relative;
+			top: -100px;
+			margin-left: auto;
+			margin-right: auto;
+			opacity: 0;
+		}
+		/** The short description for each highlight **/
+		.hlMainDesc {
+			font-size: 32px;
+			position: relative;
+			top: -100px;
+			margin-left: auto;
+			margin-right: auto;
+			opacity: 0;
+		}
+		/** The animated line seperating the title/description from the 'view' button in each highlight **/
+		.hlMidLineMid {
+			width: 0px;
+			height: 1px;
+			background-color: #FAFAFA;
+			position: relative;
+			margin-left: auto;
+			margin-right: auto;
+			top: 20px;
+			margin-bottom: 30px;
+		}
+		/** The button that will bring up details on the selected highlight (Locks scrolling between highlights and switches over to parallax) **/
+		.hlViewButton {
+			width: 200px;
+			height: 64px;
+			font-size: 32px;
+			padding-top: 11px;
+			border: 2px solid #FAFAFA;
+			position: relative;
+			margin-left: auto;
+			margin-right: auto;
+			top: 100px;
+			opacity: 0;
+			cursor: pointer;
+			-webkit-transition: color 100ms linear, background-color 100ms linear;
+			transition: color 100ms linear, background-color 100ms linear;
+		}
+		.hlViewButton:hover {
+			background-color: #FAFAFA;
+			color: #4C4B4B;
+		}
+		/** The animated line at the bottom of the page **/
+		.hlMidLineBot {
+			z-index: 3;
+			position: absolute;
+			height: 300px;
+			width: 1px;
+			opacity: 0.4;
+			background-color: #FAFAFA;
+		}
+	/** The content pane that dynamically changes.  It is basically the 'body' of the highlights.  It is viewable for each specific highlight when the respective 'view' button is clicked **/
+		/** Class defining an element as having parallax.  Parallaxing is relative to the parent element's scrolling properties (basically, the parallax values stack) **/
+		.parallax {
+			top: 0px;
+		}
+		/** Wrapper for the article pertaining to each highlight.  There is only one, and javascript loads the content dynamically **/
+		.mainContentPane {
+			overflow: visible;
+			position: absolute;
+			background-color: #f0f0f0;
+			z-index: 4;
+			width: 100%;
+			opacity: 1.0;
+		}
+		/** Inner wrapper for each article.  Keeps the width static at 1024px **/
+		.articleWrapper {
+			position: relative;
+			margin-top: 0px;
+			margin-left: auto;
+			margin-right: auto;
+			width: 1024px;
+			height: 100%;
+		}
+		/** Spacer placed at the beginning of parallax to push all elements down by a fixed amount **/
+		.articleBeginningSpacer {
+			width: 1024px;
+			position: relative;
+			display: block;
+			height: 256px;
+		}
+		/** Header element for articles **/
+			/** Wrapper for the header **/
+			.articleHeaderWrapper {
+				width: 1024px;
+				display: inline-block;
+				font-family: Titillium-Bold;
+				font-size: 32px;
+				color: #464545;
+			}
+			/** Text for the header **/
+			.articleHeader {
+				width: 512px;
+				float: left;
+				position: relative;
+				-webkit-transition: all 200ms linear;
+				transition: all 200ms linear;
+			}
+		/** Paragraph element for articles **/
+			/** Text for the paragraph **/
+			.articleParagraph {
+				position: relative;
+				width: 1024px;
+				padding: 10px;
+				display: inline-block;
+				font-family: helvetica;
+				font-size: 17px;
+				font-weight: 150;
+				line-height: 20px;
+				color: #666666;
+				text-indent: 50px;
+				-webkit-transition: all 200ms linear;
+				transition: all 200ms linear;
+			}
+		/** Youtube video element for articles **/
+			/** Wrapper for the video area **/
+			.articleYoutubeVideoWrapper {
+				position: relative;
+				display: inline-block;
+				width: 1024px;
+				height: 776px;
+				margin-top: 25px;
+				text-align: center;
+			}
+			/** The video **/
+			.articleYoutubeVideo {
+				position: absolute;
+			}
+			/** Top decorative line **/
+			.articleVideoLineTop {
+				position: absolute;
+				margin-left: 256px;
+				z-index: 10;
+				width: 1px;
+				height: 200px;
+				background-color: #D3D3D3;
+			}
+			/** Bottom decorative line **/
+			.articleVideoLineBottom {
+				position: absolute;
+				top: 576px;
+				margin-left: 768px;
+				z-index: 12;
+				width: 1px;
+				height: 200px;
+				background-color: #D3D3D3;
+			}
+		/** Tableau Embed Element for articles **/
+			/** Wrapper for tableau element.  Allows it to be sized/manipulated **/
+			.articleTableauWrapper {
+				width: 1024px;
+				height: 1270px;
+				overflow: hidden;
+				position: relative;
+				-webkit-box-shadow: 6px 6px 8px 0px rgba(50, 50, 50, 0.71);
+				-moz-box-shadow: 6px 6px 8px 0px rgba(50, 50, 50, 0.71);
+				box-shadow: 6px 6px 8px 0px rgba(50, 50, 50, 0.71);
+				border: 1px solid #C8C7C7;
+			}
+			.articleTableauIFrame {
+				top: -110px;
+				width: 1024px;
+				height: 1385px;
+				position: absolute;
+			}
+		/** Picture slideshow element for articles **/
+			/** Wrapper for the slideshow element **/
+			.articleSlideshowWrapper {
+				position: relative;
+				display: inline-block;
+				width: 1024px;
+				height: 880px;
+				margin-top: 25px;
+				text-align: center;
+			}
+			/** Top decorative line **/
+			.articleSlideshowLineTop {
+				position: absolute;
+				margin-left: 256px;
+				z-index: 10;
+				width: 1px;
+				height: 200px;
+				background-color: #D3D3D3;
+			}
+			/** Bottom decorative line **/
+			.articleSlideshowLineBottom {
+				position: absolute;
+				top: 680px;
+				margin-left: 768px;
+				z-index: 12;
+				width: 1px;
+				height: 200px;
+				background-color: #D3D3D3;
+			}
+			/** slideshow wrapper **/
+			.articleSlideshow {
+				position: absolute;
+			}
+			/** clickable arrow that selects the previous picture **/
+			.articleSlideshowLeft {
+				top: 314px;
+				left: 64px;
+				width: 52px;
+				height: 52px;
+				display: block;
+				position: absolute;
+				z-index: 12;
+				cursor: pointer;
+				-webkit-transition: background-image 100ms linear;
+				transition: background-image 100ms linear;
+				background-image: url('images/slideshows/leftArrow.png');
+			}
+			.articleSlideshowLeft:hover {
+				background-image: url('images/slideshows/leftArrowHover.png');
+			}
+			/** clickable arrow that selects the next picture **/
+			.articleSlideshowRight {
+				top: 314px;
+				left: 908px;
+				width: 52px;
+				height: 52px;
+				display: block;
+				position: absolute;
+				z-index: 12;
+				cursor: pointer;
+				-webkit-transition: background-image 100ms linear;
+				transition: background-image 100ms linear;
+				background-image: url('images/slideshows/rightArrow.png');
+			}
+			.articleSlideshowRight:hover {
+				background-image: url('images/slideshows/rightArrowHover.png');
+			}
+			/** wrapper for just the pictures **/
+			.slideshowPictures {
+				position: absolute;
+				width: 1024px;
+				height: 680px;
+				display: block;
+				overflow: hidden;
+			}
+			/** individual picture wrapper **/
+			.slideshowDiv {
+				left: 1024px;
+				position: absolute;
+				display: block;
+				width: 1024px;
+				height: 680px;
+			}
+			/** individual picture **/
+			.slideshowPic {
+				display: block;
+				width: 1024px;
+				height: 680px;
+			}
+		/** Scroll Prompt and Social Media Buttons **/
+			/** Div wrapper for this element.  It has fixed dimensions, and the main content pane splits it in half **/
+			.articleTwinstabook {
+				z-index: 10;
+				display: inline-block;
+				width: 128px;
+				height: 256px;
+				top: -128px;
+				position: relative;
+				float: right;
+				right: 128px;
+				border: 1px solid rgb(178, 178, 178);
+				overflow: hidden;
+			}
+			/** social media buttons.  There are 4 of them in a table **/
+			.twinstabookTable {
+				width: 128px;
+				height: 129px;
+				top: -5px;
+				position: relative;
+				border-spacing: 0px;
+				cursor: pointer;
+			}
+			/** link for each individual media button **/
+			.twinstabookLink {
+				display: block;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.01);
+			}
+			/** twitter cell link **/
+			#twitterLogo {
+				background-image: url("images/socialMediaLinks/twitter.png");
+				width: 64px;
+				height: 64px;
+				border-right: 1px solid rgb(178, 178, 178);
+				border-bottom: 1px solid rgb(178, 178, 178);
+				-webkit-transition: background-image 100ms linear;
+				transition: background-image 100ms linear;
+			}
+			/** on hover, change the background to something else **/
+			#twitterLogo:hover {
+				background-image: url("images/socialMediaLinks/twitterHover.png");
+			}
+			/** facebook cell link **/
+			#facebookLogo {
+				background-image: url("images/socialMediaLinks/facebook.png");
+				width: 64px;
+				height: 64px;
+				border-bottom: 1px solid rgb(178, 178, 178);
+				-webkit-transition: background-image 100ms linear;
+				transition: background-image 100ms linear;
+			}
+			/** on hover, change the background to something else **/
+			#facebookLogo:hover {
+				background-image: url("images/socialMediaLinks/facebookHover.png");
+			}
+			/** google plus cell link **/
+			#gPlusLogo {
+				background-image: url("images/socialMediaLinks/gPlus.png");
+				width: 64px;
+				height: 64px;
+				border-right: 1px solid rgb(178, 178, 178);
+				-webkit-transition: background-image 100ms linear;
+				transition: background-image 100ms linear;
+			}
+			/** on hover, change the background to something else **/
+			#gPlusLogo:hover {
+				background-image: url("images/socialMediaLinks/gPlusHover.png");
+			}
+			/** youtube cell link **/
+			#youtubeLogo {
+				background-image: url("images/socialMediaLinks/youtube.png");
+				width: 64px;
+				height: 64px;
+				-webkit-transition: background-image 100ms linear;
+				transition: background-image 100ms linear;
+			}
+			/** on hover, change the background to something else **/
+			#youtubeLogo:hover {
+				background-image: url("images/socialMediaLinks/youtubeHover.png");
+			}
